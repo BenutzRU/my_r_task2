@@ -1,4 +1,4 @@
-// В NewsFeed.js
+
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
@@ -17,7 +17,7 @@ const NewsFeed = () => {
 
   const handleScroll = () => {
     const scrollY = window.scrollY;
-    setShowScrollToTop(scrollY > 100); // Показывать стрелку, когда прокрутка больше 100px
+    setShowScrollToTop(scrollY > 100);
   };
 
   useEffect(() => {
@@ -59,7 +59,7 @@ const NewsFeed = () => {
         </Link>
       ))}
       
-      {/* Стрелка для моментального скролла вверх */}
+      
       <div
         className={`scroll-to-top ${showScrollToTop ? 'visible' : ''}`}
         onClick={scrollToTop}
