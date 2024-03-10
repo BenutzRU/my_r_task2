@@ -1,12 +1,12 @@
-// ScrollToTop.js
+
 import React, { useState, useEffect } from 'react';
-import { FaArrowUp } from 'react-icons/fa'; // Импортируйте иконку стрелочки вверх
+import { FaArrowUp } from 'react-icons/fa'; 
 
 const ScrollToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    // Показываем стрелочку, если прокрутка больше 100 пикселей
+    
     const handleScroll = () => {
       const scrolled = document.documentElement.scrollTop;
       setIsVisible(scrolled > 100);
@@ -14,13 +14,13 @@ const ScrollToTop = () => {
 
     window.addEventListener('scroll', handleScroll);
 
-    // Очищаем слушателя событий при размонтировании компонента
+    
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
-  // Прокручиваем наверх при клике
+  
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
